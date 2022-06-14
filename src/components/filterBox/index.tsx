@@ -3,7 +3,7 @@ import Select, { GroupBase, StylesConfig } from "react-select";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import React, { Dispatch, SetStateAction, useCallback, useEffect } from "react";
 import Swal from "sweetalert2";
-import { db } from "../../services/firebase";
+import { db } from "../../services/.firebase";
 import { CategoriaTypes, ValueTypes } from "../../types/types";
 
 interface FilterBoxProps {
