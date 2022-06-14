@@ -51,6 +51,31 @@
 				}
 			}
 
+			.menu-area {
+				display: flex;
+				flex-direction: row;
+				gap: 5px;
+
+				.menu-item {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					padding: 5px;
+					background: #946185;
+					color: #fff;
+					cursor: pointer;
+					border-radius: 3px;
+					font-size: 11pt;
+					transition: all 0.3s ease-in-out;
+
+
+					&:hover {
+						background: rgb(71, 33, 60);
+						color: #fff;
+					}
+				}
+			}
+
 		}
 
 		.codigos-area {

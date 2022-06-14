@@ -1,8 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { CACHE_SIZE_UNLIMITED, enableIndexedDbPersistence, initializeFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
-
 
 const firebaseConfigProd = {
 	apiKey: process.env.REACT_APP_PROD_API_KEY,
@@ -13,10 +11,8 @@ const firebaseConfigProd = {
 	appId: process.env.REACT_APP_PROD_APP_ID
 };
 
-
 // Initialize Firebase
 export const app = initializeApp(firebaseConfigProd);
-export const storage = getStorage();
 
 export const db = initializeFirestore(app, {
 	cacheSizeBytes: CACHE_SIZE_UNLIMITED

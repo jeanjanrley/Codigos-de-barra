@@ -2,6 +2,7 @@ import React, { } from "react";
 import "./App.scss";
 import { CondigoItem } from "./components/condigoItem";
 import { FilterBox } from "./components/filterBox";
+import { ModaladdFragrancia } from "./components/modalAddFragrancia";
 import { CategoriaTypes } from "./types/types";
 
 function App() {
@@ -10,15 +11,25 @@ function App() {
 
 	return (
 		<div className="App">
+			<ModaladdFragrancia />
 			<div className="container">
 				<div className="title">
 					<div className="title-box">
 						<div className="title-text">
-							Código de barras
+							Códigos de barras
 						</div>
 						<div className="filters-box">
 							<FilterBox title="Categoria" setSelectedCategoria={setSelectedCategoria} />
 							<FilterBox title="Fragrancia" setSelectedCategoria={setSelectedCategoria} />
+						</div>
+					</div>
+					<div className="horizontal-division" />
+					<div className="menu-area">
+						<div className="menu-item">
+							Cadastrar Categoria
+						</div>
+						<div className="menu-item">
+							Cadastrar Fragrancia
 						</div>
 					</div>
 					<div className="horizontal-division" />
