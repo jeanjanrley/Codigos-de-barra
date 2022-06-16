@@ -13,9 +13,11 @@
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		"ecmaFeatures": {
-			"jsx": true
+			"jsx": true,
+			"ecmaVersion": 12,
+			"sourceType": "module"
 		},
-		"ecmaVersion": 12,
+		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
 	"plugins": [
@@ -25,10 +27,7 @@
 	"rules": {
 		"indent": [
 			"error",
-			"tab",
-			{
-				"SwitchCase": 1
-			}
+			"tab"
 		],
 		"linebreak-style": [
 			"error",

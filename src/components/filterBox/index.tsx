@@ -80,6 +80,7 @@ export function FilterBox({ title, setSelectedCategoria }: FilterBoxProps) {
 		<div className="filter-box">
 			<label>{title}</label>
 			<Select
+				isClearable
 				styles={selectStyles}
 				options={optionsCategorias}
 				onChange={event => event ? setSelectedCategoria(event?.value) : null}

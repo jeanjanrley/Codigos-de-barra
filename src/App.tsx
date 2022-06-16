@@ -2,16 +2,16 @@ import React, { } from "react";
 import "./App.scss";
 import { CondigoItem } from "./components/condigoItem";
 import { FilterBox } from "./components/filterBox";
-import { ModaladdFragrancia } from "./components/modalAddFragrancia";
+import { ModalAddFragrancia } from "./components/modalAddFragrancia";
 import { CategoriaTypes } from "./types/types";
 
 function App() {
 	const [selectedCategoria, setSelectedCategoria] = React.useState<CategoriaTypes>();
-
+	const [showAddFragrancia, setShowAddFragrancia] = React.useState(false);
 
 	return (
 		<div className="App">
-			<ModaladdFragrancia />
+			{showAddFragrancia && <ModalAddFragrancia setShowAddFragrancia={setShowAddFragrancia} />}
 			<div className="container">
 				<div className="title">
 					<div className="title-box">
@@ -28,7 +28,7 @@ function App() {
 						<div className="menu-item">
 							Cadastrar Categoria
 						</div>
-						<div className="menu-item">
+						<div className="menu-item" onClick={() => setShowAddFragrancia(true)}>
 							Cadastrar Fragrancia
 						</div>
 					</div>
